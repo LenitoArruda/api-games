@@ -38,6 +38,7 @@ var DB = {
 
 app.get("/", () => {
 
+    console.log("Route working");
     
 });
 
