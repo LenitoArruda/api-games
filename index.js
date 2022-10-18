@@ -114,4 +114,4 @@ app.put("/game/:id", (req, res) => {
 
 });
 
-app.listen(45678, () => {console.log("API RUNNING!")});
+app.listen(8080, () => {console.log("API RUNNING!")});
