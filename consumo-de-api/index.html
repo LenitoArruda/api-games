@@ -41,7 +41,6 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 <script>
-
     function loadInfo(listItem){
         var title = listItem.getAttribute("data-title");
         var year = listItem.getAttribute("data-year");
@@ -115,6 +114,7 @@
 
     axios.get("http://localhost:8080/games").then(response => {
         var games = response.data;
+        console.log(games);
         var list = document.getElementById("games");
         games.forEach(game => {
             var item = document.createElement("li");
