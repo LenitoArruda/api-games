@@ -76,9 +76,9 @@
         }
 
         axios.put("http://localhost:8080/game/"+idInput.value, game).then(response => {
-                console.log(response)
-                
-                    alert("Game updated!")
+            window.location.reload(true);    
+            console.log(response);
+            alert("Game updated!");
                 
             }).catch(err => {console.log(err)});
     }
@@ -89,7 +89,8 @@
         console.log(id);
         axios.delete("http://localhost:8080/game/"+id).then(response => {
                 if(response.status == 200){
-                    alert("Game deleted!")
+                    window.location.reload(true); 
+                    alert("Game deleted!");  
                 }
             }).catch(err => {console.log(err)});
     }
@@ -106,7 +107,8 @@
         }
         axios.post("http://localhost:8080/game",game).then(response => {
             if(response.status == 200){
-                alert("Game registered!")
+                alert("Game registered!");
+                window.location.reload(true);
             }
         }).catch(err => {console.log(err)});
     }

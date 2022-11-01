@@ -12,8 +12,10 @@ const Game = connection.define('games', {
     },year: {
         type: Sequelize.INTEGER,
 
+    },price: {
+        type: Sequelize.DOUBLE,
     }
 });
 //Create table first time
-// Game.sync({force:false}).then(() => {console.log('Tabela criada!')});
+//Game.sync({force:false}).then(() => {console.log('Tabela criada!')});
 module.exports = Game;
